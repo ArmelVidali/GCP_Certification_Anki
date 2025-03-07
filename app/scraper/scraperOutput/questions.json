@@ -1,0 +1,114 @@
+[
+    {
+        "question": "You want to upload files from an on-premises virtual machine to Google Cloud Storage as part of a data migration. These files will be consumed by CloudDataProc Hadoop cluster in a GCP environment.Which command should you use?",
+        "sampleAnswers": [
+            "A.gsutil cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/Most Voted",
+            "B.gcloud cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/",
+            "C.hadoop fs cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/",
+            "D.gcloud dataproc cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "question": "You migrated your applications to Google Cloud Platform and kept your existing monitoring platform. You now find that your notification system is too slow for time critical problems.What should you do?",
+        "sampleAnswers": [
+            "A.Replace your entire monitoring platform with Stackdriver.",
+            "B.Install the Stackdriver agents on your Compute Engine instances.",
+            "C.Use Stackdriver to capture and alert on logs, then ship them to your existing platform.Most Voted",
+            "D.Migrate some traffic back to your old platform and perform AB testing on the two platforms concurrently."
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "question": "You are planning to migrate a MySQL database to the managed Cloud SQL database for Google Cloud. You have Compute Engine virtual machine instances that will connect with this Cloud SQL instance. You do not want to whitelist IPs for the Compute Engine instances to be able to access Cloud SQL.What should you do?",
+        "sampleAnswers": [
+            "A.Enable private IP for the Cloud SQL instance.Most Voted",
+            "B.Whitelist a project to access Cloud SQL, and add Compute Engine instances in the whitelisted project.",
+            "C.Create a role in Cloud SQL that allows access to the database from external instances, and assign the Compute Engine instances to that role.",
+            "D.Create a CloudSQL instance on one project. Create Compute engine instances in a different project. Create a VPN between these two projects to allow internal access to CloudSQL."
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "question": "You have deployed an HTTP(s) Load Balancer with the gcloud commands shown below.Health checks to port 80 on the Compute Engine virtual machine instance are failing and no traffic is sent to your instances. You want to resolve the problem.Which commands should you run?",
+        "sampleAnswers": [
+            "A.gcloud compute instances add-access-config ${NAME}-backend-instance-1",
+            "B.gcloud compute instances add-tags ${NAME}-backend-instance-1 --tags http-server",
+            "C.gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp --source-ranges 130.211.0.0/22,35.191.0.0/16 --direction INGRESSMost Voted",
+            "D.gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp --destination-ranges 130.211.0.0/22,35.191.0.0/16 --direction EGRESS"
+        ],
+        "image": "https://www.examtopics.com/assets/media/exam-media/04137/0000300001.jpg",
+        "answer": "C"
+    },
+    {
+        "question": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between 3 different website designs.Which approach should you use?",
+        "sampleAnswers": [
+            "A.Deploy the website on App Engine and use traffic splitting.Most Voted",
+            "B.Deploy the website on App Engine as three separate services.",
+            "C.Deploy the website on Cloud Functions and use traffic splitting.",
+            "D.Deploy the website on Cloud Functions as three separate functions."
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "question": "You need to copy directory local-scripts and all of its contents from your local workstation to a Compute Engine virtual machine instance.Which command should you use?",
+        "sampleAnswers": [
+            "A.gsutil cp --project ג€my-gcp-projectג€ -r ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone ג€us-east1-bג€",
+            "B.gsutil cp --project ג€my-gcp-projectג€ -R ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone ג€us-east1-bג€",
+            "C.gcloud compute scp --project ג€my-gcp-projectג€ --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone ג€us-east1-bג€Most Voted",
+            "D.gcloud compute mv --project ג€my-gcp-projectג€ --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone ג€us-east1-bג€"
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "question": "You are deploying your application to a Compute Engine virtual machine instance with the Stackdriver Monitoring Agent installed. Your application is a unix process on the instance. You want to be alerted if the unix process has not run for at least 5 minutes. You are not able to change the application to generate metrics or logs.Which alert condition should you configure?",
+        "sampleAnswers": [
+            "A.Uptime check",
+            "B.Process health",
+            "C.Metric absenceMost Voted",
+            "D.Metric threshold"
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "question": "You have two tables in an ANSI-SQL compliant database with identical columns that you need to quickly combine into a single table, removing duplicate rows from the result set.What should you do?",
+        "sampleAnswers": [
+            "A.Use the JOIN operator in SQL to combine the tables.",
+            "B.Use nested WITH statements to combine the tables.",
+            "C.Use the UNION operator in SQL to combine the tables.Most Voted",
+            "D.Use the UNION ALL operator in SQL to combine the tables."
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "question": "You have an application deployed in production. When a new version is deployed, some issues don't arise until the application receives traffic from users in production. You want to reduce both the impact and the number of users affected.Which deployment strategy should you use?",
+        "sampleAnswers": [
+            "A.Blue/green deployment",
+            "B.Canary deploymentMost Voted",
+            "C.Rolling deployment",
+            "D.Recreate deployment"
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "question": "Your company wants to expand their users outside the United States for their popular application. The company wants to ensure 99.999% availability of the database for their application and also wants to minimize the read latency for their users across the globe.Which two actions should they take? (Choose two.)",
+        "sampleAnswers": [
+            "A.Create a multi-regional Cloud Spanner instance with \"nam-asia-eur1\" configuration.Most Voted",
+            "B.Create a multi-regional Cloud Spanner instance with \"nam3\" configuration.",
+            "C.Create a cluster with at least 3 Spanner nodes.Most Voted",
+            "D.Create a cluster with at least 1 Spanner node.",
+            "E.Create a minimum of two Cloud Spanner instances in separate regions with at least one node.",
+            "F.Create a Cloud Dataflow pipeline to replicate data across different databases."
+        ],
+        "image": null,
+        "answer": "AC"
+    }
+]

@@ -8,7 +8,7 @@ import time
 import json
 from login import login
 from downloadQuestions import downloadQuestions
-from checkCaptcha import checkCaptcha  # Assuming this function checks CAPTCHA presence
+from checkCaptcha import checkCaptcha  
 
 # Login and get the initial page source
 driver, soup = login()

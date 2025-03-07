@@ -37,8 +37,9 @@ def login():
         # Send the credentials 
         with open("params.json", "r", encoding="utf-8") as paramsFile:
                 credentials = json.load(paramsFile)
-        email_field.send_keys(credentials.examTopicEmail) 
-        password_field.send_keys(credentials.examTopicPassword)       
+                print(credentials)
+        email_field.send_keys(credentials["examTopicEmail"]) 
+        password_field.send_keys(credentials["examTopicPassword"])       
 
         login_button.click()
 
