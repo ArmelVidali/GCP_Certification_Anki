@@ -25,7 +25,6 @@ while True:
             EC.element_to_be_clickable((By.CLASS_NAME, "btn.btn-success.pull-right"))
         )
 
-        # Click the "Next Page" button
         next_page_btn.click()
 
         # Wait for the page to load 
@@ -36,17 +35,22 @@ while True:
         # Check if CAPTCHA is present
         captcha_present = checkCaptcha(driver)
 
-        # If CAPTCHA is present, wait until you solved manually
+        # If CAPTCHA is present, wait until it's solved manually
         while captcha_present:
-            WebDriverWait(driver, 10000000000000000000000000000).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "exam-question-card"))
-        )
+            print("CAPTCHA detected! Please solve it manually...")
+            WebDriverWait(driver, 120).until(  
+                EC.presence_of_element_located((By.CLASS_NAME, "exam-question-card"))
+            )
             captcha_present = checkCaptcha(driver)
 
-        # Update the soup object to reflect the new page
+        #  Update the soup object AFTER CAPTCHA is solved
+        time.sleep(2)  #  ensure page loads properly
         soup = BeautifulSoup(driver.page_source, 'html.parser')
 
-        # Increment the page counter
+        # Check if soup is correctly updated before using it
+        if soup.find("div", class_="exam-question-card") is None:
+            print("Warning: No question cards found on this page!")
+
         page_visited_count += 1
         print(f"Scraping page {page_visited_count}...")
 
