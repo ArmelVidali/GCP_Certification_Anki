@@ -57,6 +57,8 @@ python app/scraper/examsTopic/main.py
 python app/ai/GPT_explain.py
 ```
 
+Change the query on `gpt_explain.py` to custom the query to your neeeds (more depth, translation ...)
+
 ### TODO
 
 ---
