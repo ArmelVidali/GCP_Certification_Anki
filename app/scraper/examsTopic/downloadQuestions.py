@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 
 
-def downloadQuestions(driver, soupPage, file_path="app/scraper/scraperOutput/questions.json"):
+def downloadQuestions(driver, soupPage, file_path="app/scraper/scraperOutput/architectQuestions.json"):
     print(os.getcwd())
     """ 
     Downloads questions, optionally taking a screenshot if an image is present
