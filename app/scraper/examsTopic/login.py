@@ -45,7 +45,7 @@ def login():
 
 
 
-        driver.get('https://www.examtopics.com/exams/google/professional-cloud-architect/view/10')
+        driver.get('https://www.examtopics.com/exams/google/professional-cloud-developer/view/10')
 
         # Process the page content
         output_page_html = driver.page_source
